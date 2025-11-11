@@ -37,7 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+    
+    #external apps for support
+    'rest_framework',
+    'django_filters',
+    
+    #i need to add my aapps here
+    'equipment',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
