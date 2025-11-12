@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    h2 { text-align: center; margin-bottom: 15px; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+    button:hover { background: #2980b9; }
+  </style>
+</head>
+<body>
+  <form method="POST">
+    <h2>Login</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+  </form>
+</body>
+</html>

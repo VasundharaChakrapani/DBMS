@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Lab Equipment{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            background: #f6f7fb;
+        }
+        nav {
+            background: #222;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'equipment_list' %}">Equipments</a>
+    <a href="{% url 'equipment_add' %}">Add Equipment</a>
+</nav>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
