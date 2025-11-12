@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    
     #external apps for support
     'rest_framework',
     'django_filters',
@@ -142,5 +143,6 @@ REST_FRAMEWORK = {
         'rest_framework.filters.OrderingFilter',
     ),
 }
+
 
 AUTH_USER_MODEL = 'equipment.User'
